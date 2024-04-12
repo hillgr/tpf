@@ -48,6 +48,53 @@
         font-family: "Damion", sans-serif;
         font-size: 48px;
       }
+
+      .curved-box {
+    position: absolute;
+    top: 33%; /* Adjust the distance from the top */
+    left: 50%;
+    min-width: 60%;
+    min-height: 33%;
+    transform: translateX(-50%);
+    width: 60%; /* Adjust the width of the box */
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust the alpha value to change transparency */
+    border-radius: 30px; /* Adjust the border radius to make it more curved */
+    padding: 20px; /* Adjust the padding inside the box */
+    text-align: center;
+    color: white; /* Text color */
+    font-size: 24px; /* Adjust the font size */
+    font-weight: bold; /* Adjust the font weight */
+    z-index: 3; /* Ensure it's above the videos */
+    display: flex; /* Enable flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+
+      .video-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust the alpha value to change the darkness */
+    z-index: 2;
+  }
     </style>
 
     <!-- =======================================================
@@ -63,7 +110,7 @@
     <header id="header" class="fixed-top">
       <div class="container d-flex align-items-center">
         <h1 class="logo me-auto">
-          <a href="index.html">Trailer Park Floosies</a>
+          <a href="index.html">TPF</a>
         </h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -72,6 +119,9 @@
           <ul>
             <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
             <!-- <li><a class="nav-link scrollto" href="#about">About</a></li> -->
+            <li>
+              <a class="nav-link scrollto" href="#videos">Videos</a>
+            </li>
             <li>
               <a class="nav-link scrollto" href="#portfolio">Photos</a>
             </li>
@@ -85,11 +135,112 @@
       </div>
     </header>
     <!-- End Header -->
-
+    <!-- For Desktop -->
+    <div class="container-fluid d-none d-lg-block p-0 position-relative">
+      <div class="curved-box">
+        <h1 class="logo" style="font-size: 400%; color: #ff0f8f;">
+          Trailer Park Floosies
+        </h1>
+      </div>
+      <div class="video-overlay"></div> <!-- Overlay div added -->
+      <div class="row mx-0">
+        <div class="col-lg-6 px-0">
+          <div class="video-container">
+            <div class="video-overlay"></div>
+            <video autoplay muted loop>
+              <source src="assets/videos/daisy.m4v" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="col-lg-6 px-0">
+          <div class="video-container">
+            <div class="video-overlay"></div>
+            <video autoplay muted loop>
+              <source src="assets/videos/willie.m4v" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-0 mt-0">
+        <div class="col-lg-6 px-0">
+          <div class="video-container">
+            <div class="video-overlay"></div>
+            <video autoplay muted loop>
+              <source src="assets/videos/gator.m4v" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="col-lg-6 px-0">
+          <div class="video-container">
+            <div class="video-overlay"></div>
+            <video autoplay muted loop>
+              <source src="assets/videos/skeeter.m4v" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- For Mobile -->
+    <div class="container-fluid d-lg-none p-0 position-relative">
+      <div class="curved-box">
+        <h1 class="logo" style="font-size: 300%; color: #ff0f8f;">
+          Trailer Park Floosies
+        </h1>
+      </div>
+      <div class="row mx-0 mt-0">
+        <div class="col-12 px-0">
+          <div class="video-container">
+            <div class="video-overlay"></div>
+              <video autoplay muted loop>
+              <source src="assets/videos/daisy.m4v" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-0 mt-0">
+        <div class="col-12 px-0">
+          <div class="video-container">
+            <div class="video-overlay"></div>
+              <video autoplay muted loop>
+              <source src="assets/videos/willie.m4v" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-0 mt-0">
+        <div class="col-12 px-0">
+          <div class="video-container">
+            <div class="video-overlay"></div>
+              <video autoplay muted loop>
+              <source src="assets/videos/gator.m4v" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-0 mt-0">
+        <div class="col-12 px-0">
+          <div class="video-container">
+            <div class="video-overlay"></div>
+              <video autoplay muted loop>
+              <source src="assets/videos/skeeter.m4v" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
       <div class="container">
-        <div class="row">
+        <div class="row mx-0">
           <div
             class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
             data-aos="fade-up"
@@ -103,11 +254,11 @@
             </h2>
             <div class="d-flex justify-content-center justify-content-lg-start">
               <a href="#contact" class="btn-get-started scrollto">Book Us</a>
-              <a
+              <!-- <a
                 href="https://www.youtube.com/watch?v=SemqPshxhUU"
                 class="glightbox btn-watch-video"
                 ><i class="bi bi-play-circle"></i><span>Watch Video</span></a
-              >
+              > -->
             </div>
           </div>
           <div
@@ -119,125 +270,200 @@
               src="assets/img/flamingos.png"
               class="img-fluid animated"
               alt=""
+              style="width: 85%; height: 85%; object-fit: contain;"
             />
           </div>
         </div>
       </div>
     </section>
     <!-- End Hero -->
+    
+  <!-- ======= Videos Section ======= -->
+  <section id="videos" style="padding:0">
+    <div class="row mx-0">
+      <div class="col-lg-12 px-0">
+        <div class="video-container">
+          <video autoplay controls>
+            <source src="assets/videos/tpf.m4v" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Upcoming Shows Section -->
+<section id="upcoming-shows" class="upcoming-shows">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Upcoming Shows</h2>
+    </div>
+    <div class="row pb-4">
+      <!-- Card for each show -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Saturday 4/20 - 8:00 PM</h5>
+            <p class="card-text">Rising Star Casino<br>Rising Sun, IN</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Saturday 4/27 - 5:30 PM</h5>
+            <p class="card-text">Oak Hills High School<br>Green Township, OH</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Thursday 5/23 - 6:00 PM</h5>
+            <p class="card-text">The Takeover - West Chester Summer Concert Series<br>West Chester, OH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pb-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Friday 5/24 - 8:00 PM</h5>
+            <p class="card-text">Hooters Newport<br>Newport, KY</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Saturday 6/1 - 8:30 PM</h5>
+            <p class="card-text">MVPs<br>Silverton, OH</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Saturday 6/15 - 7:00 PM</h5>
+            <p class="card-text">St. Therese Festival<br>Southgate, KY</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pb-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Saturday 6/28 - 8:00 PM</h5>
+            <p class="card-text">The Knot Marina<br>Union, KY</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Friday 7/5 - 8:00 PM</h5>
+            <p class="card-text">Hooters Newport<br>Newport, KY</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Saturday 7/20 - 12:00 PM</h5>
+            <p class="card-text">Jungle Jam at MegaCorp Pavilion<br>Newport, KY</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pb-4">
+    </div>
+    <div class="row pb-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Saturday 7/27 - 8:00 PM</h5>
+            <p class="card-text">The Knot Marina<br>Union, KY</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Friday 8/2</h5>
+            <p class="card-text">Private Event</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Saturday 8/24 - 8:00 PM</h5>
+            <p class="card-text">Heritage Hills Campground<br>Brookville, IN</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pb-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Friday 8/30 - 8:00 PM</h5>
+            <p class="card-text">Hooters Newport<br>Newport, KY</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Friday 9/6 - 8:00 PM</h5>
+            <p class="card-text">St. Savior Festival<br>Cincinnati, OH</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Saturday 10/5 - 6:30 PM</h5>
+            <p class="card-text">Tucker's Landing<br>Cincinnati, OH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pb-4">
+    </div>
+    <div class="row pb-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Saturday 10/19 - 8:00 PM</h5>
+            <p class="card-text">Highway House<br>Colerain, OH</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Saturday 11/16 - 8:00 PM</h5>
+            <p class="card-text">Highway House<br>Colerain, OH</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Friday 12/13</h5>
+            <p class="card-text">Private Event</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <main id="main">
-      <!-- ======= Clients Section ======= -->
-      <!-- <section id="clients" class="clients section-bg">
-        <div class="container">
-          <div class="row" data-aos="zoom-in">
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <img
-                src="assets/img/clients/client-1.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <img
-                src="assets/img/clients/client-2.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <img
-                src="assets/img/clients/client-3.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <img
-                src="assets/img/clients/client-4.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <img
-                src="assets/img/clients/client-5.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <img
-                src="assets/img/clients/client-6.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- End Cliens Section -->
-
-      <!-- ======= About Us Section ======= -->
-      <!-- <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>About Us</h2>
-          </div>
-
-          <div class="row content">
-            <div class="col-lg-6">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <ul>
-                <li>
-                  <i class="ri-check-double-line"></i> Ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat
-                </li>
-                <li>
-                  <i class="ri-check-double-line"></i> Duis aute irure dolor in
-                  reprehenderit in voluptate velit
-                </li>
-                <li>
-                  <i class="ri-check-double-line"></i> Ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0">
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
-              </p>
-              <a href="#" class="btn-learn-more">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- End About Us Section -->
-
       <!-- ======= Portfolio Section ======= -->
       <section id="portfolio" class="portfolio">
         <div class="container" data-aos="fade-up">
@@ -245,18 +471,6 @@
             <h2>Photos</h2>
             <p></p>
           </div>
-
-          <!-- <ul
-            id="portfolio-flters"
-            class="d-flex justify-content-center"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-card">Card</li>
-            <li data-filter=".filter-web">Web</li>
-          </ul> -->
 
           <div
             class="row portfolio-container"
@@ -281,12 +495,6 @@
                   title="Trailer Park Floosies"
                   ><i class="bx bx-plus"></i
                 ></a>
-                <!-- <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a> -->
               </div>
             </div>
 
@@ -308,12 +516,6 @@
                   title="Web 3"
                   ><i class="bx bx-plus"></i
                 ></a>
-                <!-- <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a> -->
               </div>
             </div>
 
@@ -335,12 +537,6 @@
                   title="Web 3"
                   ><i class="bx bx-plus"></i
                 ></a>
-                <!-- <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a> -->
               </div>
             </div>
 
@@ -362,12 +558,6 @@
                   title="Bengals"
                   ><i class="bx bx-plus"></i
                 ></a>
-                <!-- <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a> -->
               </div>
             </div>
 
@@ -389,163 +579,12 @@
                   title="Bengals"
                   ><i class="bx bx-plus"></i
                 ></a>
-                <!-- <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a> -->
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- End Portfolio Section -->
-
-      <!-- ======= Frequently Asked Questions Section ======= -->
-      <!-- <section id="faq" class="faq section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Frequently Asked Questions</h2>
-            <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
-            </p>
-          </div>
-
-          <div class="faq-list">
-            <ul>
-              <li data-aos="fade-up" data-aos-delay="100">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  class="collapse"
-                  data-bs-target="#faq-list-1"
-                  >Non consectetur a erat nam at lectus urna duis?
-                  <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-1"
-                  class="collapse show"
-                  data-bs-parent=".faq-list"
-                >
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-                    volutpat lacus laoreet non curabitur gravida. Venenatis
-                    lectus magna fringilla urna porttitor rhoncus dolor purus
-                    non.
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="200">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  data-bs-target="#faq-list-2"
-                  class="collapsed"
-                  >Feugiat scelerisque varius morbi enim nunc?
-                  <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-2"
-                  class="collapse"
-                  data-bs-parent=".faq-list"
-                >
-                  <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque
-                    habitant morbi. Id interdum velit laoreet id donec ultrices.
-                    Fringilla phasellus faucibus scelerisque eleifend donec
-                    pretium. Est pellentesque elit ullamcorper dignissim. Mauris
-                    ultrices eros in cursus turpis massa tincidunt dui.
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="300">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  data-bs-target="#faq-list-3"
-                  class="collapsed"
-                  >Dolor sit amet consectetur adipiscing elit?
-                  <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-3"
-                  class="collapse"
-                  data-bs-parent=".faq-list"
-                >
-                  <p>
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices
-                    sagittis orci. Faucibus pulvinar elementum integer enim. Sem
-                    nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                    pellentesque eu tincidunt. Lectus urna duis convallis
-                    convallis tellus. Urna molestie at elementum eu facilisis
-                    sed odio morbi quis
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="400">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  data-bs-target="#faq-list-4"
-                  class="collapsed"
-                  >Tempus quam pellentesque nec nam aliquam sem et tortor
-                  consequat? <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-4"
-                  class="collapse"
-                  data-bs-parent=".faq-list"
-                >
-                  <p>
-                    Molestie a iaculis at erat pellentesque adipiscing commodo.
-                    Dignissim suspendisse in est ante in. Nunc vel risus commodo
-                    viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
-                    bibendum est. Purus gravida quis blandit turpis cursus in.
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="500">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  data-bs-target="#faq-list-5"
-                  class="collapsed"
-                  >Tortor vitae purus faucibus ornare. Varius vel pharetra vel
-                  turpis nunc eget lorem dolor?
-                  <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-5"
-                  class="collapse"
-                  data-bs-parent=".faq-list"
-                >
-                  <p>
-                    Laoreet sit amet cursus sit amet dictum sit amet justo.
-                    Mauris vitae ultricies leo integer malesuada nunc vel.
-                    Tincidunt eget nullam non nisi est sit amet. Turpis nunc
-                    eget lorem dolor sed. Ut venenatis tellus in metus vulputate
-                    eu scelerisque.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section> -->
-      <!-- End Frequently Asked Questions Section -->
 
       <!-- ======= Contact Section ======= -->
       <section id="contact" class="contact" style="background: #ff0f8f">
@@ -560,7 +599,7 @@
             </p> -->
           </div>
 
-          <div class="row">
+          <div class="row mx-0">
             <div class="col-lg-12 d-flex align-items-stretch">
               <div class="info">
                 <div class="address">
@@ -578,76 +617,8 @@
                     >
                   </p>
                 </div>
-                <!-- 
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                  frameborder="0"
-                  style="border: 0; width: 100%; height: 290px"
-                  allowfullscreen
-                ></iframe> -->
               </div>
             </div>
-
-            <!-- <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-              >
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      required
-                    />
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="name">Subject</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="subject"
-                    id="subject"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="name">Message</label>
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="10"
-                    required
-                  ></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
-                </div>
-                <div class="text-center">
-                  <button type="submit">Send Message</button>
-                </div>
-              </form>
-            </div> -->
           </div>
         </div>
       </section>
@@ -657,29 +628,9 @@
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
-      <!-- <div class="footer-newsletter">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-6">
-              <h4>Join Our Newsletter</h4>
-              <p>
-                Tamen quem nulla quae legam multos aute sint culpa legam noster
-                magna
-              </p>
-              <form action="" method="post">
-                <input type="email" name="email" /><input
-                  type="submit"
-                  value="Subscribe"
-                />
-              </form>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
       <div class="footer-top">
         <div class="container">
-          <div class="row">
+          <div class="row mx-0">
             <div class="col-lg-3 col-md-6 footer-contact">
               <h3>Trailer Park Floosies</h3>
               <strong>Email:</strong>
@@ -691,9 +642,10 @@
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Links</h4>
               <ul>
-                <!-- <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
-                </li> -->
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#videos">videos</a>
+                </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
                   <a href="#portfolio">Photos</a>
@@ -702,9 +654,6 @@
                   <i class="bx bx-chevron-right"></i>
                   <a href="#contact">Contact</a>
                 </li>
-                <!-- <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
-                </li> -->
               </ul>
             </div>
 
@@ -732,13 +681,6 @@
           &copy; Copyright <strong><span>Trailer Park Floosies</span></strong
           >. All Rights Reserved
         </div>
-        <!-- <div class="credits"> -->
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-        <!-- </div> -->
       </div>
     </footer>
     <!-- End Footer -->
