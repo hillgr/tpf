@@ -50,51 +50,61 @@
       }
 
       .curved-box {
-    position: absolute;
-    top: 33%; /* Adjust the distance from the top */
-    left: 50%;
-    min-width: 60%;
-    min-height: 33%;
-    transform: translateX(-50%);
-    width: 60%; /* Adjust the width of the box */
-    background-color: rgba(0, 0, 0, 0.8); /* Adjust the alpha value to change transparency */
-    border-radius: 30px; /* Adjust the border radius to make it more curved */
-    padding: 20px; /* Adjust the padding inside the box */
-    text-align: center;
-    color: white; /* Text color */
-    font-size: 24px; /* Adjust the font size */
-    font-weight: bold; /* Adjust the font weight */
-    z-index: 3; /* Ensure it's above the videos */
-    display: flex; /* Enable flexbox layout */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-  }
+        position: absolute;
+        top: 33%; /* Adjust the distance from the top */
+        left: 50%;
+        min-width: 60%;
+        min-height: 33%;
+        transform: translateX(-50%);
+        width: 60%; /* Adjust the width of the box */
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.8
+        ); /* Adjust the alpha value to change transparency */
+        border-radius: 30px; /* Adjust the border radius to make it more curved */
+        padding: 20px; /* Adjust the padding inside the box */
+        text-align: center;
+        color: white; /* Text color */
+        font-size: 24px; /* Adjust the font size */
+        font-weight: bold; /* Adjust the font weight */
+        z-index: 3; /* Ensure it's above the videos */
+        display: flex; /* Enable flexbox layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+      }
 
       .video-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
-}
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+      }
 
-.video-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+      .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Adjust the alpha value to change the darkness */
-    z-index: 2;
-  }
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.2
+        ); /* Adjust the alpha value to change the darkness */
+        z-index: 2;
+      }
     </style>
 
     <!-- =======================================================
@@ -117,8 +127,12 @@
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-            <!-- <li><a class="nav-link scrollto" href="#about">About</a></li> -->
+            <li><a class="nav-link scrollto active" href="#top">Home</a></li>
+            <li>
+              <a class="nav-link scrollto" href="#upcoming-shows"
+                >Upcoming Shows</a
+              >
+            </li>
             <li>
               <a class="nav-link scrollto" href="#videos">Videos</a>
             </li>
@@ -136,19 +150,23 @@
     </header>
     <!-- End Header -->
     <!-- For Desktop -->
-    <div class="container-fluid d-none d-lg-block p-0 position-relative">
+    <div
+      id="#top"
+      class="container-fluid d-none d-lg-block p-0 position-relative"
+    >
       <div class="curved-box">
-        <h1 class="logo" style="font-size: 400%; color: #ff0f8f;">
+        <h1 class="logo" style="font-size: 400%; color: #ff0f8f">
           Trailer Park Floosies
         </h1>
       </div>
-      <div class="video-overlay"></div> <!-- Overlay div added -->
+      <div class="video-overlay"></div>
+      <!-- Overlay div added -->
       <div class="row mx-0">
         <div class="col-lg-6 px-0">
           <div class="video-container">
             <div class="video-overlay"></div>
             <video autoplay muted loop>
-              <source src="assets/videos/daisy.m4v" type="video/mp4">
+              <source src="assets/videos/daisy.m4v" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -157,7 +175,7 @@
           <div class="video-container">
             <div class="video-overlay"></div>
             <video autoplay muted loop>
-              <source src="assets/videos/willie.m4v" type="video/mp4">
+              <source src="assets/videos/willie.m4v" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -168,7 +186,7 @@
           <div class="video-container">
             <div class="video-overlay"></div>
             <video autoplay muted loop>
-              <source src="assets/videos/gator.m4v" type="video/mp4">
+              <source src="assets/videos/gator.m4v" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -177,18 +195,18 @@
           <div class="video-container">
             <div class="video-overlay"></div>
             <video autoplay muted loop>
-              <source src="assets/videos/skeeter.m4v" type="video/mp4">
+              <source src="assets/videos/skeeter.m4v" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
       </div>
     </div>
-    
+
     <!-- For Mobile -->
     <div class="container-fluid d-lg-none p-0 position-relative">
       <div class="curved-box">
-        <h1 class="logo" style="font-size: 300%; color: #ff0f8f;">
+        <h1 class="logo" style="font-size: 300%; color: #ff0f8f">
           Trailer Park Floosies
         </h1>
       </div>
@@ -196,8 +214,8 @@
         <div class="col-12 px-0">
           <div class="video-container">
             <div class="video-overlay"></div>
-              <video autoplay muted loop>
-              <source src="assets/videos/daisy.m4v" type="video/mp4">
+            <video autoplay muted loop>
+              <source src="assets/videos/daisy.m4v" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -207,8 +225,8 @@
         <div class="col-12 px-0">
           <div class="video-container">
             <div class="video-overlay"></div>
-              <video autoplay muted loop>
-              <source src="assets/videos/willie.m4v" type="video/mp4">
+            <video autoplay muted loop>
+              <source src="assets/videos/willie.m4v" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -218,8 +236,8 @@
         <div class="col-12 px-0">
           <div class="video-container">
             <div class="video-overlay"></div>
-              <video autoplay muted loop>
-              <source src="assets/videos/gator.m4v" type="video/mp4">
+            <video autoplay muted loop>
+              <source src="assets/videos/gator.m4v" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -229,8 +247,8 @@
         <div class="col-12 px-0">
           <div class="video-container">
             <div class="video-overlay"></div>
-              <video autoplay muted loop>
-              <source src="assets/videos/skeeter.m4v" type="video/mp4">
+            <video autoplay muted loop>
+              <source src="assets/videos/skeeter.m4v" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -259,6 +277,18 @@
                 class="glightbox btn-watch-video"
                 ><i class="bi bi-play-circle"></i><span>Watch Video</span></a
               > -->
+              <a
+                href="https://www.facebook.com/Trailerparkfloosies/"
+                class="glightbox btn-watch-video"
+              >
+                <i class="bi bi-facebook"></i><span>Facebook</span>
+              </a>
+              <a
+                href="https://www.instagram.com/trailerparkfloosies/"
+                class="glightbox btn-watch-video"
+              >
+                <i class="bi bi-instagram"></i><span>Instagram</span>
+              </a>
             </div>
           </div>
           <div
@@ -270,198 +300,287 @@
               src="assets/img/flamingos.png"
               class="img-fluid animated"
               alt=""
-              style="width: 85%; height: 85%; object-fit: contain;"
+              style="width: 85%; height: 85%; object-fit: contain"
             />
           </div>
         </div>
       </div>
     </section>
     <!-- End Hero -->
-    
-  <!-- ======= Videos Section ======= -->
-  <section id="videos" style="padding:0">
-    <div class="row mx-0">
-      <div class="col-lg-12 px-0">
-        <div class="video-container">
-          <video autoplay controls class="lazy-video">
-            <source data-src="assets/videos/tpf.m4v" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+
+    <!-- ======= Videos Section ======= -->
+    <section id="videos" style="padding: 0">
+      <div class="row mx-0">
+        <div class="col-lg-12 px-0">
+          <div class="video-container">
+            <video autoplay controls class="lazy-video">
+              <source data-src="assets/videos/tpf.m4v" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- <section id="social-media" class="social-media">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Social Media</h2>
+        </div>
+        <div class="row pb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <a
+                  href="https://www.facebook.com/Trailerparkfloosies/"
+                  class="btn-get-started scrollto"
+                >
+                  <i class="bi bi-facebook"></i><span>Facebook</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <a
+                  href="https://www.instagram.com/trailerparkfloosies/"
+                  class="btn-get-started scrollto"
+                >
+                  <i class="bi bi-instagram"></i><span>Instagram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
     <!-- Upcoming Shows Section -->
-<section id="upcoming-shows" class="upcoming-shows">
-  <div class="container" data-aos="fade-up">
-    <div class="section-title">
-      <h2>Upcoming Shows</h2>
-    </div>
-    <div class="row pb-4">
-      <!-- Card for each show -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Saturday 4/20 - 8:00 PM</h5>
-            <p class="card-text">Rising Star Casino<br>Rising Sun, IN</p>
+    <section id="upcoming-shows" class="upcoming-shows">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Upcoming Shows</h2>
+        </div>
+        <div class="row pb-4">
+          <div class="col-md-12">April</div>
+        </div>
+        <div class="row pb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 4/20 - 8:00 PM</h5>
+                <p class="card-text">Rising Star Casino<br />Rising Sun, IN</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 4/27 - 5:30 PM</h5>
+                <p class="card-text">
+                  Oak Hills High School<br />Green Township, OH
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Saturday 4/27 - 5:30 PM</h5>
-            <p class="card-text">Oak Hills High School<br>Green Township, OH</p>
+        <div class="row pb-4">
+          <div class="col-md-12">May</div>
+        </div>
+        <div class="row pb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Thursday 5/23 - 6:00 PM</h5>
+                <p class="card-text">
+                  The Takeover - West Chester Summer Concert Series<br />West
+                  Chester, OH
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Friday 5/24 - 8:00 PM</h5>
+                <p class="card-text">Hooters Newport<br />Newport, KY</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 5/25 - 8:00 PM</h5>
+                <p class="card-text">Manhattan Harbor Club<br />Dayton, KY</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Thursday 5/23 - 6:00 PM</h5>
-            <p class="card-text">The Takeover - West Chester Summer Concert Series<br>West Chester, OH</p>
+        <div class="row pb-4">
+          <div class="col-md-12">June</div>
+        </div>
+        <div class="row pb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 6/1 - 8:30 PM</h5>
+                <p class="card-text">MVPs<br />Silverton, OH</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 6/15 - 7:00 PM</h5>
+                <p class="card-text">St. Therese Festival<br />Southgate, KY</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 6/28 - 8:00 PM</h5>
+                <p class="card-text">The Knot Marina<br />Union, KY</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row pb-4">
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Friday 5/24 - 8:00 PM</h5>
-            <p class="card-text">Hooters Newport<br>Newport, KY</p>
+        <div class="row pb-4">
+          <div class="col-md-12">July</div>
+        </div>
+        <div class="row pb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Friday 7/5 - 8:00 PM</h5>
+                <p class="card-text">Hooters Newport<br />Newport, KY</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 7/20 - 12:00 PM</h5>
+                <p class="card-text">
+                  Jungle Jam at MegaCorp Pavilion<br />Newport, KY
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 7/27 - 8:00 PM</h5>
+                <p class="card-text">The Knot Marina<br />Union, KY</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Saturday 6/1 - 8:30 PM</h5>
-            <p class="card-text">MVPs<br>Silverton, OH</p>
+        <div class="row pb-4">
+          <div class="col-md-12">August</div>
+        </div>
+        <div class="row pb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Friday 8/2</h5>
+                <p class="card-text">Private Event</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 8/24 - 8:00 PM</h5>
+                <p class="card-text">
+                  Heritage Hills Campground<br />Brookville, IN
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Friday 8/30 - 8:00 PM</h5>
+                <p class="card-text">Hooters Newport<br />Newport, KY</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Saturday 6/15 - 7:00 PM</h5>
-            <p class="card-text">St. Therese Festival<br>Southgate, KY</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row pb-4">
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Saturday 6/28 - 8:00 PM</h5>
-            <p class="card-text">The Knot Marina<br>Union, KY</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Friday 7/5 - 8:00 PM</h5>
-            <p class="card-text">Hooters Newport<br>Newport, KY</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Saturday 7/20 - 12:00 PM</h5>
-            <p class="card-text">Jungle Jam at MegaCorp Pavilion<br>Newport, KY</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row pb-4">
-    </div>
-    <div class="row pb-4">
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Saturday 7/27 - 8:00 PM</h5>
-            <p class="card-text">The Knot Marina<br>Union, KY</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Friday 8/2</h5>
-            <p class="card-text">Private Event</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Saturday 8/24 - 8:00 PM</h5>
-            <p class="card-text">Heritage Hills Campground<br>Brookville, IN</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row pb-4">
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Friday 8/30 - 8:00 PM</h5>
-            <p class="card-text">Hooters Newport<br>Newport, KY</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Friday 9/6 - 8:00 PM</h5>
-            <p class="card-text">St. Savior Festival<br>Cincinnati, OH</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Saturday 10/5 - 6:30 PM</h5>
-            <p class="card-text">Tucker's Landing<br>Cincinnati, OH</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row pb-4">
-    </div>
-    <div class="row pb-4">
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Saturday 10/19 - 8:00 PM</h5>
-            <p class="card-text">Highway House<br>Colerain, OH</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Saturday 11/16 - 8:00 PM</h5>
-            <p class="card-text">Highway House<br>Colerain, OH</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Friday 12/13</h5>
-            <p class="card-text">Private Event</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
+        <div class="row pb-4">
+          <div class="col-md-12">September</div>
+        </div>
+        <div class="row pb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Friday 9/6 - 8:00 PM</h5>
+                <p class="card-text">St. Savior Festival<br />Cincinnati, OH</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pb-4">
+          <div class="col-md-12">October</div>
+        </div>
+        <div class="row pb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 10/5 - 6:30 PM</h5>
+                <p class="card-text">Tucker's Landing<br />Cincinnati, OH</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 10/12 - 8:00 PM</h5>
+                <p class="card-text">Manhattan Harbor Club<br />Dayton, KY</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 10/19 - 8:00 PM</h5>
+                <p class="card-text">Highway House<br />Colerain, OH</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pb-4">
+          <div class="col-md-12">November</div>
+        </div>
+        <div class="row pb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday 11/16 - 8:00 PM</h5>
+                <p class="card-text">Highway House<br />Colerain, OH</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row pb-4">
+          <div class="col-md-12">December</div>
+        </div>
+        <div class="row pb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Friday 12/13</h5>
+                <p class="card-text">Private Event</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <main id="main">
       <!-- ======= Portfolio Section ======= -->
@@ -513,7 +632,7 @@
                   href="assets/img/photos/group.jpg"
                   data-gallery="portfolioGallery"
                   class="portfolio-lightbox preview-link"
-                  title="Web 3"
+                  title="TPF Members"
                   ><i class="bx bx-plus"></i
                 ></a>
               </div>
@@ -534,7 +653,49 @@
                   href="assets/img/photos/group2.png"
                   data-gallery="portfolioGallery"
                   class="portfolio-lightbox preview-link"
-                  title="Web 3"
+                  title="TPF Members"
+                  ><i class="bx bx-plus"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-img">
+                <img
+                  src="assets/img/photos/newport_fireworks.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="portfolio-info">
+                <h4>Newport, KY</h4>
+                <p>Fireworks</p>
+                <a
+                  href="assets/img/photos/newport_fireworks.jpg"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Newport Fireworks"
+                  ><i class="bx bx-plus"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-img">
+                <img
+                  src="assets/img/photos/newport_fireworks2.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="portfolio-info">
+                <h4>Newport, KY</h4>
+                <p>Fireworks</p>
+                <a
+                  href="assets/img/photos/newport_fireworks2.jpg"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Newport Fireworks"
                   ><i class="bx bx-plus"></i
                 ></a>
               </div>
@@ -644,6 +805,14 @@
               <ul>
                 <li>
                   <i class="bx bx-chevron-right"></i>
+                  <a
+                    href="https://docs.google.com/drawings/d/1noBsOFROOyShfpLXfqyQJNy7PadmcZDpaGEU7xn26AM/edit"
+                    target="_blank"
+                    >Stage Plot</a
+                  >
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
                   <a href="#videos">videos</a>
                 </li>
                 <li>
@@ -704,30 +873,38 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+      document.addEventListener("DOMContentLoaded", function () {
+        var lazyVideos = [].slice.call(
+          document.querySelectorAll("video.lazy-video")
+        );
 
-          if ("IntersectionObserver" in window) {
-              let lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
-                  entries.forEach(function(video) {
-                      if (video.isIntersecting) {
-                          for (var source in video.target.children) {
-                              var videoSource = video.target.children[source];
-                              if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-                                  videoSource.src = videoSource.dataset.src;
-                              }
-                          }
-                          video.target.load();
-                          video.target.classList.remove("lazy-video");
-                          lazyVideoObserver.unobserve(video.target);
-                      }
-                  });
-              });
+        if ("IntersectionObserver" in window) {
+          let lazyVideoObserver = new IntersectionObserver(function (
+            entries,
+            observer
+          ) {
+            entries.forEach(function (video) {
+              if (video.isIntersecting) {
+                for (var source in video.target.children) {
+                  var videoSource = video.target.children[source];
+                  if (
+                    typeof videoSource.tagName === "string" &&
+                    videoSource.tagName === "SOURCE"
+                  ) {
+                    videoSource.src = videoSource.dataset.src;
+                  }
+                }
+                video.target.load();
+                video.target.classList.remove("lazy-video");
+                lazyVideoObserver.unobserve(video.target);
+              }
+            });
+          });
 
-              lazyVideos.forEach(function(lazyVideo) {
-                  lazyVideoObserver.observe(lazyVideo);
-              });
-          }
+          lazyVideos.forEach(function (lazyVideo) {
+            lazyVideoObserver.observe(lazyVideo);
+          });
+        }
       });
     </script>
   </body>
